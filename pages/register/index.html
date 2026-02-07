@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/src/style.css" />
-    <title>Document</title>
+    <title>Page d'inscription</title>
   </head>
   <body>
     <header>
-      <img src="../../public/assets/images/logo/logo_numlynx.png" alt="" />
-      <img
+      <div class="logos">
+        <img class="logo-mobile"
         src="../../public/assets/images/logo/envato-labs-image-edit_70.png"
-        alt=""
+        alt="Logo Numlynx"
       />
-      <nav>
+        <img class="logo-desktop" src="../../public/assets/images/logo/logo_numlynx.png" alt="Logo Numlynx" />
+      </div>
 
-        *
-        
+      <nav>
+        <!--Logo burger-->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -32,19 +33,23 @@
             d="M3 6.001h18m-18 6h18m-18 6h18"
           />
         </svg>
+
+
         <ul>
           <li><a href="#">Partager</a></li>
           <li><a href="#">Collaborer</a></li>
           <li><a href="#">Apprendre</a></li>
           <li><a href="#">Rencontrer</a></li>
         </ul>
+
       </nav>
 
       <div class="btn-login">
+        <!--logo members-->
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="256"
-          height="256"
+          width="24"
+          height="24"
           viewBox="0 0 256 256"
         >
           <path
@@ -52,9 +57,13 @@
             d="M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29M38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46m211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205"
           />
         </svg>
+
         <button id="auth-login">Login</button>
+
       </div>
+
       <div class="btn-profil">
+        <!--logo profil-->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -66,9 +75,13 @@
             d="M13.5 0h-12C.675 0 0 .675 0 1.5v13c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5M13 14H2V2h11zM4 9h7v1H4zm0 2h7v1H4zm1-6.5a1.5 1.5 0 1 1 3.001.001A1.5 1.5 0 0 1 5 4.5M7.5 6h-2C4.675 6 4 6.45 4 7v1h5V7c0-.55-.675-1-1.5-1"
           />
         </svg>
+
         <button id="auth-profil">Mon profil</button>
+
       </div>
+
     </header>
+
     <main>
       <section class="container-left">
         <h1>Créez votre compte</h1>
