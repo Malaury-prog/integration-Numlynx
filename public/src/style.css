@@ -94,10 +94,6 @@ body {
   background-color: var(--background-color);
   /*BG ok, mais sur le container right ?
   leur donner une classe, ou établir à nouveau une taille sur l'image BG du COntainer-right ? */
-  .logo-mobile {
-    max-width: 100px;
-    aspect-ratio: auto;
-  }
 }
 
 header {
@@ -105,6 +101,10 @@ header {
   justify-content: space-between;
   padding: var(--padding-small);
   width: 100%;
+  .logo-mobile {
+    max-width: 100px;
+    aspect-ratio: auto;
+  }
   .logo-desktop {
     display: none;
   }
@@ -170,15 +170,42 @@ main {
   padding: var(--padding-medium);
   h1 {
     color: var(--accent-gold);
-    height: var(--mobile-font-size-h1);
-    font-size: var(--mobile-font-size-h1); /*CHARLY JE PEUX PAS LE METTRE EN H1*/
+    font-weight: var(--mobile-font-weight-h1);
+    font-size: var(--mobile-font-size-h1);
     padding: var(--padding-medium);
+    text-align: center;
   }
 }
 
 .container-left {
   display: flex;
   flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-small);
+  gap: var(--gap-medium);
+  label {
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-small);
+    color: var(--text-main);
+  }
+  input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: center;
+    &::placeholder {
+      display: flex;
+      color: red;
+    }
+  }
 }
 
 .container-right {
