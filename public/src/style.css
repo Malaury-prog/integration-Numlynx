@@ -1,308 +1,619 @@
 /* --import-Font-*/
+
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+
 
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+
+
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+
+
 /* Déclarations des variables
+
 --Colors-- */
+
 :root {
+
   --background-color: #0d0e0f;
+
   --bg-surface-card: #12161d;
+
   --accent-gold: #d1913c;
+
   --light-gold: #ffb84d;
+
   --line-fech: #2c3544;
+
   --text-main: #ffffff;
+
   --text-muted: #a0aec0;
 
+
+
   /*Colors-components-status*/
+
   --color-status-online: #22c55e;
+
   --color-status-offline: #ef4444;
+
   --color-status-busy: #f59e0b;
+
   --color-status-dnd: #94a3b8;
 
+
+
   /*variables pour l'effet LIQUID GLASS + DEFINIR COLOR BORDER*/
+
   --color-effect-glass: #af8b554f;
+
   /*utile?*/
 
 
+
+
+
   /*Font-weight*/
+
   --desktop-font-weight-h1: 700;
+
   --desktop-font-weight-h2: 600;
+
   --desktop-font-weight-h3: 500;
+
   --desktop-font-weight-h4: 500;
+
   --desktop-font-weight-h5: 400;
+
   --desktop-font-weight-h6: 400;
+
   --desktop-font-weight-legend: 500;
+
   --desktop-font-weight-badges: 500;
+
   --desktop-font-weight-chapo: 400;
+
   --mobile-font-weight-h1: 600;
+
   --mobile-font-weight-h2: 500;
+
   --mobile-font-weight-h3: 500;
+
   --mobile-font-weight-h4: 400;
+
   --mobile-font-weight-h5: 400;
+
   --mobile-font-weight-h6: 300;
+
   --mobile-font-weight-legend: 500;
+
   --mobile-font-weight-badges: 500;
+
   --mobile-font-weight-chapo: 400;
 
+
+
   /*Font-size*/
+
   --desktop-font-size-h1: 3rem;
+
   --desktop-font-size-h2: 2.5rem;
+
   --desktop-font-size-h3: 2rem;
+
   --desktop-font-size-h4: 1.5rem;
+
   --desktop-font-size-h5: 1.25rem;
+
   --desktop-font-size-h6: 1rem;
+
   --desktop-font-size-legend: 0.875rem;
+
   --desktop-font-size-badges: 1.25rem;
+
   --desktop-font-size-chapo: 0.875rem;
+
   --mobile-font-size-h1: 2.5rem;
+
   --mobile-font-size-h2: 2rem;
+
   --mobile-font-size-h3: 1.5rem;
+
   --mobile-font-size-h4: 1.5rem;
+
   --mobile-font-size-h5: 1.25;
+
   --mobile-font-size-h6: 1rem;
+
   --mobile-font-size-badges: 1.125rem;
+
   --mobile-font-size-legend: 0.75rem;
+
   --mobile-font-size-chapo: 0.75rem;
 
+
+
   /*border-radius*/
+
   --border-radius-small: 16px;
+
   --border-radius-medium: 32px;
+
   --border-radius-large: 50%;
 
+
+
   /*padding*/
+
   --padding-small: 12px;
+
   --padding-medium: 32px;
+
   --padding-large: 48px;
 
+
+
   /*typography*/
+
   --typography-headings: "Cinzel";
+
   --typography-text: "Inter";
+
   --typography-miscellaneous: "JetBrains+Mono";
 
+
+
   /*GAP*/
+
   --gap-small: 12px;
+
   --gap-medium: 24px;
+
   --gap-large: 36px;
+
 }
+
+
 
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
 }
+
+
 
 body {
+
   min-height: 100vh;
+
   font-family: var(--typography-text);
+
   background-color: var(--background-color);
+
   /*BG ok, mais sur le container right ?
+
   leur donner une classe, ou établir à nouveau une taille sur l'image BG du COntainer-right ? */
+
 }
+
+
 
 /*Application d'une class nommé "LIQUID-GLASS" - sans border-radius*/
+
 /* .liquid-glass{
-  BLUR. 
+
+  BLUR.
+
   INNER
+
   INNER
+
   BOX SHADOW
+
   color
+
 } */
 
+
+
 header {
+
   display: flex;
+
   justify-content: space-between;
+
   background-color: var(--bg-surface-card);
+
   padding: var(--padding-small);
+
   width: 100%;
+
   position: sticky;
+
   top: 0;
+
   .logo-mobile {
+
     max-width: 100px;
+
     aspect-ratio: auto;
+
   }
+
   .logo-desktop {
+
     display: none;
+
   }
+
   ul {
+
     display: none;
+
   }
+
   button {
+
     display: none;
+
   }
+
   svg {
+
     color: var(--accent-gold);
+
     &:hover {
+
       color: var(--light-gold);
+
       cursor: pointer;
+
       transform: scale(1.5) translateY(-5px) translateX(-2px);
+
     }
+
   }
+
   /* REALISER LA MISE EN FORME DES BOUTONS. max-width + width  100%
+
   @media (width >=780px) {
+
     .logo-mobile {
+
       display: none;
+
     }
+
     .logo-desktop {
+
       display: flex;
+
       img {
+
         max-width: 100px;
+
         aspect-ratio: auto;
+
       }
+
       button {
+
         display: flex;
+
       }
+
       ul {
+
         display: flex;
+
       }
+
     }
+
   } */
+
 }
+
+
 
 /*REALISER LE @media, pour supérieur à 375px - rétablir un display Flex et cacher le burger
+
 changement de logo, le logo mobile display none. Logo desktop display: flex, plus définir taille ! */
 
+
+
 .compenents-nav {
+
   display: flex;
+
   align-items: center;
+
   gap: var(--gap-small);
+
 }
+
+
 
 .btns-logs {
+
   display: flex;
+
   align-items: center;
+
   gap: var(--gap-small);
+
   button {
+
     color: var(--accent-gold);
+
     border: 1px solid;
+
   }
+
 }
+
+
 
 main {
+
   display: grid;
+
   align-items: center;
+
   width: 100%; /*Demander à Charly pourquoi ça déborde et ce n'est pas fixe*/
+
   grid-template-columns: 1fr;
+
   padding: var(--padding-medium);
+
   h1 {
+
     color: var(--accent-gold);
+
     font-weight: var(--mobile-font-weight-h1);
+
     font-size: var(--mobile-font-size-h1);
+
     padding: var(--padding-medium);
+
     text-align: center;
+
   }
+
 }
+
+
 
 .container-left {
+
   display: flex;
+
   flex-direction: column;
+
   padding: var(--padding-medium);
+
   align-items:center;
+
   width: 100%;
+
   h1{
+
     font-family: var(--typography-headings);
+
   }
+
 }
 
+
+
 form {
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   width: fit-content;
+
   padding: var(--padding-small);
+
   gap: var(--gap-medium);
+
   label {
+
     display: flex;
+
     padding: var(--padding-small);
+
     color: var(--accent-gold);
+
   }
+
   input {
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     text-align: center;
+
     width: 100%;
+
     border: none;
+
     padding: var(--padding-small);
+
     border-radius: var(--border-radius-medium);
+
     background-color: var(--bg-surface-card);
+
     color: var(--text-main);
+
     &::placeholder {
+
       display: flex;
+
       justify-items: center;
+
       width: 100%;
+
     }
+
   }
+
 }
+
+
+
 
 
 #send {
+
   display: flex;
+
   justify-content: center;
+
   button {
+
     background-color: var(--bg-surface-card);
+
     color: var(--light-gold);
+
     padding: var(--padding-small);
+
     border: 1px solid #af8b554f; /*!PAS DEFINITIF*/
+
     border-radius: 10px;
+
     &:hover{
+
       cursor: pointer;
+
       border: solid 3px var(--color-effect-glass);
+
     }
+
   }
+
 }
+
+
+
 
 
 .reset{
+
   display: flex;
+
   justify-content: center;
+
   button {
+
     background-color: var(--bg-surface-card);
+
     color: var(--light-gold);
+
     border: 1px solid #af8b554f; /*!PAS DEFINITIF*/
+
     border-radius: 10px;
+
     padding: 5px;
+
     &:hover{
+
       cursor: pointer;
+
       border: solid 3px var(--color-effect-glass);
+
       /*ON VA JOUER AVEC LES KEEEEYFRAMES*/
+
     }
+
   }
+
 }
+
+
 
 .btns{
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   gap:var(--gap-small);
-  
+
+ 
+
   button{
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     background: var(--bg-surface-card);
+
     color: var(--text-main);
+
     min-width: 8rem;
+
     padding: 5px;
+
     gap: 5px;
+
     cursor: pointer;
-    &:hover{
-      color: rgb(97, 139, 202);
-    }
+
+ 
+
     svg{
+
       color: rgb(97, 139, 202);
+
       stroke: white;
+
+    }
+
+    &:hover{
+
+      color: rgb(97, 139, 202);
+
+      svg {
+
+        color: var(--text-main);
+
+      }
+
+    }
+
   }
-  }
+
 }
+
+
 
 .container-right {
+
   display: flex;
+
   img {
+
     display: none;
+
   }
+
 }
-
-
